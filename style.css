@@ -14,4 +14,8 @@ button {
   padding-bottom: 300px;
 }
 
+#canvas1 {
+  width: 200px;
+  height: 200px;
+}
 /* END CHOOSE CHARACTER MENU */
