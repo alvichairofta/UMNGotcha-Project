@@ -1,0 +1,26 @@
+#character {
+  width: 230px;
+  height: 230px;
+  border: 1px solid black;
+}
+
+#left-arrow {
+  /* position: absolute;
+  top: 45%; */
+  transform: rotate(180deg);
+  border: none;
+  /* background: none; */
+}
+
+#right-arrow {
+  /* position: absolute;
+  top: 45%;
+  left: 27%; */
+  border: none;
+  /* background: none; */
+}
+
+#left-arrow img,
+#right-arrow img {
+  width: 10%;
+}
