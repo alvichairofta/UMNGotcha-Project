@@ -3,37 +3,75 @@ const goat = document.getElementById("canvas2");
 const dog = document.getElementById("canvas3");
 const arrowL = document.getElementById("left-arrow");
 const arrowR = document.getElementById("right-arrow");
-characters = ["Sources/Cat.jpg", "Sources/Goat.png", "Sources/Dog.png"];
+let characters = ["Sources/Cat.jpg", "Sources/Goat.png", "Sources/Dog.png"];
 
 const ctx1 = cat.getContext("2d");
 const ctx2 = goat.getContext("2d");
 const ctx3 = dog.getContext("2d");
-const playerImg = new Image();
-playerImg.src = characters[1];
+const CatImg = new Image();
+CatImg.src = characters[0];
+const GoatImg = new Image();
+GoatImg.src = characters[1];
+const DogImg = new Image();
+DogImg.src = characters[2];
 
 const CAT_WIDTH = (cat.width = 150);
 const CAT_HEIGHT = (cat.height = 150);
 const GOAT_WIDTH = (goat.width = 150);
 const GOAT_HEIGHT = (goat.height = 150);
-const DOG_WIDTH = (dog.width = 150);
-const DOG_HEIGHT = (dog.height = 150);
+const DOG_WIDTH = (dog.width = 120);
+const DOG_HEIGHT = (dog.height = 120);
 
-const spriteWidth = 96; //kucing = 141
-const spriteheight = 96; //kucing = 141
-let frameX = 0;
-let frameY = 4;
+const goatwidth = 96;
+const goatheight = 96;
+const dogwidth = 96;
+const dogheight = 96;
+const catwidth = 141;
+const catheight = 141;
+let cframeX = 0;
+let cframeY = 5;
+let gframeX = 0;
+let gframeY = 3;
+let dframeX = 0;
+let dframeY = 4;
 let gameFrame = 0;
 let character;
 
-function animate() {
+animateCat();
+animateGoat();
+animateDog();
+
+function animateCat() {
+  ctx1.clearRect(0, 0, CAT_WIDTH, CAT_HEIGHT);
+  ctx1.drawImage(CatImg, cframeX * catwidth, cframeY * catheight, catwidth, catheight, 5, -5, catwidth, catheight);
+  if (gameFrame % 25 == 0) {
+    if (cframeX < 3) cframeX++;
+    else cframeX = 0;
+  }
+  gameFrame++;
+  requestAnimationFrame(animateCat);
+}
+
+function animateGoat() {
   ctx2.clearRect(0, 0, GOAT_WIDTH, GOAT_HEIGHT);
-  ctx2.drawImage(playerImg, frameX * spriteWidth, frameY * spriteheight, spriteWidth, spriteheight, 25, 25, spriteWidth, spriteheight);
-  if (gameFrame % 35 == 0) {
-    if (frameX < 3) frameX++;
-    else frameX = 0;
+  ctx2.drawImage(GoatImg, gframeX * goatwidth, gframeY * goatheight, goatwidth, goatheight, 25, 40, goatwidth, goatheight);
+  if (gameFrame % 25 == 0) {
+    if (gframeX < 3) gframeX++;
+    else gframeX = 0;
   }
 
   gameFrame++;
-  requestAnimationFrame(animate);
+  requestAnimationFrame(animateGoat);
 }
-animate();
+
+function animateDog() {
+  ctx3.clearRect(0, 0, DOG_WIDTH, DOG_HEIGHT);
+  ctx3.drawImage(DogImg, dframeX * dogwidth, dframeY * dogheight, dogwidth, dogheight, 10, 15, dogwidth, dogheight);
+  if (gameFrame % 25 == 0) {
+    if (dframeX < 3) dframeX++;
+    else dframeX = 0;
+  }
+
+  gameFrame++;
+  requestAnimationFrame(animateDog);
+}
