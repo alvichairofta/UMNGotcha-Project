@@ -14,7 +14,9 @@ button {
   padding-bottom: 300px;
 }
 
-#canvas1 {
+#canvas1,
+#canvas2,
+#canvas3 {
   width: 200px;
   height: 200px;
 }
