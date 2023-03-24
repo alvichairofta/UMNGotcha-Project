@@ -3,7 +3,7 @@ const goat = document.getElementById("canvas2");
 const dog = document.getElementById("canvas3");
 const arrowL = document.getElementById("left-arrow");
 const arrowR = document.getElementById("right-arrow");
-let characters = ["Sources/Cat.jpg", "Sources/Goat.png", "Sources/Dog.png"];
+let characters = ["Sources/Cat.png", "Sources/Goat.png", "Sources/Dog.png"];
 
 const ctx1 = cat.getContext("2d");
 const ctx2 = goat.getContext("2d");
@@ -31,7 +31,7 @@ const catheight = 141;
 let cframeX = 0;
 let cframeY = 5;
 let gframeX = 0;
-let gframeY = 3;
+let gframeY = 4;
 let dframeX = 0;
 let dframeY = 4;
 let gameFrame = 0;

@@ -4,14 +4,11 @@ button {
 }
 #navigasi {
   font-family: "Viga", sans-serif;
+  background-color: #ced3dc;
 }
 
 #navigasi img {
   width: 30px;
-}
-
-#selection {
-  padding-bottom: 300px;
 }
 
 #canvas1,
@@ -19,5 +16,22 @@ button {
 #canvas3 {
   width: 200px;
   height: 200px;
+}
+
+.card {
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-body {
+  background-color: #90c2e7;
+}
+
+#characterName {
+  width: 50%;
+  margin: 0 auto;
 }
 /* END CHOOSE CHARACTER MENU */
