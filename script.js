@@ -41,6 +41,38 @@ animateCat();
 animateGoat();
 animateDog();
 
+const catCard = document.getElementById("catCard");
+const goatCard = document.getElementById("goatCard");
+const dogCard = document.getElementById("dogCard");
+const catButton = document.getElementById("cat");
+const goatButton = document.getElementById("goat");
+const dogButton = document.getElementById("dog");
+const start = document.getElementById("start");
+const charName = document.getElementById("characterName");
+let input = 0;
+
+catButton.addEventListener("click", function () {
+  input = 1;
+  goatCard.style.backgroundColor = "#90c2e7";
+  catCard.style.backgroundColor = "#84DCC6";
+  dogCard.style.backgroundColor = "#90c2e7";
+});
+goatButton.addEventListener("click", function () {
+  input = 2;
+  goatCard.style.backgroundColor = "#84DCC6";
+  catCard.style.backgroundColor = "#90c2e7";
+  dogCard.style.backgroundColor = "#90c2e7";
+});
+dogButton.addEventListener("click", function () {
+  input = 3;
+  goatCard.style.backgroundColor = "#90c2e7";
+  catCard.style.backgroundColor = "#90c2e7";
+  dogCard.style.backgroundColor = "#84DCC6";
+});
+
+console.log(input);
+console.log(charName.value);
+
 function animateCat() {
   ctx1.clearRect(0, 0, CAT_WIDTH, CAT_HEIGHT);
   ctx1.drawImage(CatImg, cframeX * catwidth, cframeY * catheight, catwidth, catheight, 5, -5, catwidth, catheight);

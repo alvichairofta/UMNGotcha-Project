@@ -46,11 +46,11 @@ button {
 .card {
   transition: all 0.2s ease-in-out;
   border: none;
+  background-color: rgba(255, 255, 255, 0.822);
 }
 
 .card:hover {
   transform: scale(1.1);
-  cursor: pointer;
 }
 
 .card-body {
@@ -58,8 +58,14 @@ button {
   border: none;
 }
 
+.card-body button {
+  width: 100%;
+  border: none;
+  user-select: none;
+}
+
 #characterName {
-  width: 50%;
+  width: 30%;
   margin: 0 auto;
 }
 /* END CHOOSE CHARACTER MENU */
