@@ -46,7 +46,7 @@ button {
 .card {
   transition: all 0.2s ease-in-out;
   border: none;
-  background-color: rgba(255, 255, 255, 0.822);
+  background-color: rgba(255, 255, 255, 0.245);
 }
 
 .card:hover {
